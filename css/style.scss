@@ -1,0 +1,93 @@
+
+@font-face {
+    font-family: 'RFKrabuler'; /* Имя шрифта */
+    src: url(../font/RF\ Krabuler\ Regular.ttf) format('truetype'); /* Путь к файлу со шрифтом */
+}
+
+html,body{margin: 0;font-family: 'RFKrabuler';line-height: 1.5;overflow-y:hidden;height: 100%;}
+//button{width: auto;height: auto;padding: 15px;border:none;border-radius: 5%; color:white;}
+button{cursor: pointer;justify-content: center;padding-bottom: calc(0.375em - 1px);padding-left: 0.75em;
+    padding-right: 0.75em;padding-top: calc(0.375em - 1px);text-align: center;
+    border-radius: 4px;box-shadow: none;height: 2.25em;font-size: 1.5rem;line-height: 1.5;font-family: 'RFKrabuler';
+    text-transform: uppercase;font-weight: bold;white-space: nowrap;border:none;color:white;outline: none;}
+body{background-image: url(../img/generals/bg/bg-1.jpg);background-repeat: no-repeat; background-attachment: fixed; }
+
+.header__info{display:flex;justify-content: space-between;align-items: center;
+    font-weight: bold;font-size: 2.5rem;padding: 30px;color:#4A3363;
+    .header__info-name{display:flex;font-size: 3rem;padding: 0 3rem 0 0;
+        div{margin-right: 35px;}
+        .header__info-name__score{background-image: url(../img/generals/elements/score.png);width: 241px;
+            height: 91px;
+            background-size: contain;background-repeat: no-repeat;position: relative;
+            #score{position: absolute;margin-top: 2%;margin-left: 40%;}
+        }  
+    }
+    .header__info-count{position: relative;
+        .imgCount{width: 512px;height: 82px;}
+        #countNumber{position: absolute;top: 4px;margin-left: 32%;}
+
+    }
+}
+
+
+  
+.ram{border: 25px solid gold;
+    border-image-source: url(../img/game/ram/png-2663750_640.png);
+    border-image-slice: 30;
+    border-image-repeat: round;
+}
+main{
+    .winwowGame{height: 700px;max-height: 700px;
+        #picture{
+            
+            .img{width: 70%;height: 200px;display: flex;justify-content: center;margin:0 15%;
+                .idImg{max-width: 200px;position: absolute;}
+            }
+        }
+    }
+    .footerGame{display:flex;position: relative;margin-top:-100px;margin-left: 5%;margin-right: 15%;
+        .clock{animation:moveClock;animation-duration:1s;position: absolute;}
+        #clock{font-family: 'RFKrabuler';line-height: 1.5;font-size: 3rem;color:#4A3363;
+            position: absolute;top:22px;left: 70px;}
+        .game__button{text-align: center;width: 100%;
+            .gamePictute__stillLife{background: #23d160;margin-right: .75rem;}
+            .gamePictute__other{background: red}
+        
+        }
+    }
+
+    .windowWin{text-align: center;position: relative;display: flex;justify-content: space-around;color:#363636;
+        img{height: 70vh;}
+        .windowContent{position: absolute;width:700px;top: 150px;font-size: 2rem;
+            .next{background: #23d160;}
+        }
+        
+    }
+   
+}
+
+footer{position: relative;max-height: 200px;width: 100%;
+    
+}
+
+.evilGnom {height: 300px;width: auto;position: fixed;right: 5%;bottom: 5%;}
+
+@keyframes movePicture {
+    from {
+        top: 5%;
+        left: 35%;
+    }
+    to {
+        top: 55%;
+        left: 45%;
+    }
+}
+
+@keyframes moveClock {
+    from {
+        left: -250px;
+    }
+    to {
+        left: 0;
+    }
+}
